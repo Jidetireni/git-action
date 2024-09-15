@@ -9,7 +9,7 @@ jobs:
       - name: run every 8 o clock every sunday 
         run: | 
           current_time=$(date +'%H:%M')
-          if [ "$current_time" -eq "20:00" ]
+          if [ "$current_time" = "20:00" ]
           then 
             echo "This step runs only at exactly 8:00 PM"
           else 
