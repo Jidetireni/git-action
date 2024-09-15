@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '*/10 20 * * 0'
+    - cron: '*/10 20-21 * * 0'
 
 jobs:
   test_schedule:
@@ -14,3 +14,4 @@ jobs:
             echo "This step runs only at exactly 8:00 PM"
           else 
             echo "Skipping because it's not exactly 8:00 PM"
+          fi
