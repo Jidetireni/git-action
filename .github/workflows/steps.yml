@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Display custom enivironmental variables
-        if: {{ env.platform == 'AWS' }}
+        if: ${{ env.platform == 'AWS' }}
         run: |
           echo " the cloud platform is $platform "
           echo " the region is $region "
