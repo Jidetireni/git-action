@@ -21,6 +21,11 @@ jobs:
           echo " the cloud platform is $platform "
           echo " the region is $region "
           echo " the user is $user "
-  
-    
-
+      
+      - name: Display github env variables 
+        run: | 
+          echo " github action: $GITHUB_ACTION "
+          echo " github action path: $GITHUB_ACTION_PATH "
+          echo " github action repo: $GITHUB_ACTION_REPOSITORY "
+          echo " github actions: $GITHUB_ACTIONS"
+          echo " github server url $GITHUB_SERVER_URL "
