@@ -1,0 +1,26 @@
+name: learning github actions
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  display:
+    runs-on: ubuntu-latest
+    env:
+      platform: AWS
+      region: us-east-1
+      user: jidetireni
+
+    steps:
+      - name: Display custom enivironmental variables
+        if: {{ env.platform == 'AWS' }}
+        run: |
+          echo " the cloud platform is $platform "
+          echo " the region is $region "
+          echo " the user is $user "
+  
+    
+
